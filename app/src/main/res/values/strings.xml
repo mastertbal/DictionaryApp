@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DictionaryApp</string>
+    <string name="word_to_search">Type in word to search for"</string>
+    <string name="search_icon">Searcch Icon</string>
+</resources>
