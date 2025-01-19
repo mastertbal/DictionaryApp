@@ -6,7 +6,11 @@ import android.media.MediaPlayer
 
 fun playAudio(audioUrl: String) {
     val mediaPlayer = MediaPlayer()
-    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+    mediaPlayer.setAudioAttributes(
+        AudioAttributes.Builder()
+            .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
+            .build()
+    )
     mediaPlayer.setDataSource(audioUrl)
     mediaPlayer.prepare()
     mediaPlayer.start()
